@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+    <label for="func">Fonction:</label>
+    <input type="text" name="func" id="func" required>
+    <label for="a">Intervalle a:</label>
+    <input type="number" name="a" id="a" required>
+    <label for="b">Intervalle b:</label>
+    <input type="number" name="b" id="b" required>
+    <button type="submit">Trouver</button>
+</form>
+{% endblock %}

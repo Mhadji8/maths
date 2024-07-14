@@ -1,0 +1,16 @@
+<!-- points_critiques.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Calcul des Points Critiques</h2>
+<form method="post" action="/points_critiques">
+    <label for="function">Entrez la fonction (ex: x**2 + y**2) :</label>
+    <input type="text" id="function" name="function" required><br>
+    <button type="submit">Calculer</button>
+</form>
+{% if result %}
+    <h3>Points Critiques :</h3>
+    <pre>{{ result }}</pre>
+{% endif %}
+{% endblock %}

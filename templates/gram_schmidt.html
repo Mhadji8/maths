@@ -1,0 +1,16 @@
+<!-- gram_schmidt.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Orthonormalisation par Gram-Schmidt</h2>
+<form method="post" action="/gram_schmidt">
+    <label for="vectors">Entrez les vecteurs (un par ligne, valeurs séparées par des espaces) :</label><br>
+    <textarea name="vectors" id="vectors" rows="5" cols="50" required></textarea><br>
+    <button type="submit">Orthonormaliser</button>
+</form>
+{% if result %}
+    <h3>Résultat :</h3>
+    <pre>{{ result }}</pre>
+{% endif %}
+{% endblock %}

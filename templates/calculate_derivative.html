@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+    <label for="expression">Expression:</label>
+    <input type="text" name="expression" id="expression" required>
+    <label for="variable">Variable:</label>
+    <input type="text" name="variable" id="variable" required>
+    <button type="submit">Calculer</button>
+</form>
+{% endblock %}

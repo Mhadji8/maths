@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST">
+    <label for="expression">Expression :</label>
+    <input type="text" name="expression" required>
+    
+    <label for="variable">Variable :</label>
+    <input type="text" name="variable" required>
+    
+    <label for="point">Point (ex: oo ou -oo) :</label>
+    <input type="text" name="point" required placeholder="oo ou -oo ou un nombre">
+    
+    <button type="submit">Calculer la limite</button>
+</form>
+
+{% endblock %}

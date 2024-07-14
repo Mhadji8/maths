@@ -1,0 +1,16 @@
+<!-- equations_differentielles.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Résolution d'Équations Différentielles</h2>
+<form method="post" action="/equations_differentielles">
+    <label for="equation">Entrez l'équation différentielle (ex: Eq(diff(y(x), x), y(x)) ) :</label>
+    <input type="text" id="equation" name="equation" required><br>
+    <button type="submit">Résoudre</button>
+</form>
+{% if result %}
+    <h3>Solutions :</h3>
+    <pre>{{ result }}</pre>
+{% endif %}
+{% endblock %}

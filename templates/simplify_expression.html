@@ -1,0 +1,20 @@
+<!-- simplify_expression.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Développer, Simplifier ou Factoriser une Expression</h2>
+<form action="{{ url_for('simplify_expression') }}" method="post">
+    <label for="expression">Expression :</label>
+    <input type="text" id="expression" name="expression" required>
+    
+    <label for="action">Action :</label>
+    <select id="action" name="action">
+        <option value="simplify">Simplifier</option>
+        <option value="expand">Développer</option>
+        <option value="factor">Factoriser</option>
+    </select>
+    
+    <button type="submit">Soumettre</button>
+</form>
+{% endblock %}
+

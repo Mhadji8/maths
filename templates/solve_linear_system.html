@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+    <label for="A">Matrix A:</label>
+    <textarea name="A" id="A" required></textarea>
+    <label for="b">Vector b:</label>
+    <textarea name="b" id="b" required></textarea>
+    <button type="submit">Résoudre</button>
+</form>
+{% include 'keyboard.html' %}
+{% endblock %}
